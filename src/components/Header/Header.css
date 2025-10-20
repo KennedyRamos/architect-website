@@ -1,0 +1,12 @@
+header{
+    padding: var(--50-spacing) 0;
+}
+
+nav a{
+    color: var(--title-color);
+    margin: 0 0 0 var(--50-spacing);   
+}
+
+nav a:hover{
+    color: var(--primary-color);
+}
