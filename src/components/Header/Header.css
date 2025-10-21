@@ -3,10 +3,5 @@ header{
 }
 
 nav a{
-    color: var(--title-color);
     margin: 0 0 0 var(--50-spacing);   
-}
-
-nav a:hover{
-    color: var(--primary-color);
 }

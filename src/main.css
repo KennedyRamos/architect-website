@@ -46,6 +46,18 @@ body{
   min-height: 100vh;
 }
 
+a{
+  color: var(--title-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h6{
+  font-family: var(--font-DM);
+}
+
 p{
   color: var(--paragraph-color);
 }
