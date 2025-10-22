@@ -1,0 +1,19 @@
+.banner{
+    background-color: var(--tertiary-color);
+    background-position: center;
+    background-size: cover;
+    height: 17.5rem;
+    width: 100%;
+}
+
+.title-panel{
+    background-color: #fff;
+    border-radius: 1.8rem 1.8rem 0 0;
+    height: 5.7rem;
+    margin: 0 auto;
+    max-width: 25rem;
+}
+
+.title-panel h1{
+    font-size: 2.5rem;
+}
