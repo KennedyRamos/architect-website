@@ -15,7 +15,7 @@
     padding: 0;
 }
 
-.footer-col li, h3, .footer-logo  {
+.footer-col li, footer h3, .footer-logo  {
     margin: 0 0 var(--25-spacing) 0;
 }
 
