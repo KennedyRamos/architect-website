@@ -7,7 +7,7 @@ export default function Home(){
     return(
         <>
             <Header></Header>
-            <Banner title="home" image="bg-abaut.jpg"/>
+            <Banner title="About us" image="bg-abaut.jpg"/>
             
             
             <div className="container">
