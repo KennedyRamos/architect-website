@@ -1,9 +1,9 @@
 //COMPONENTS
-import Hero from "../components/Hero/Hero"
-import Banner from "../components/Banner/Banner"
-import Button from "../components/Button/Button"
-import Header from "../components/Header/Header"
-import Footer from "../components/Footer/Footer"
+import ProjectList from "../components/ProjectList/ProjectsList";
+import Hero from "../components/Hero/Hero";
+import Banner from "../components/Banner/Banner";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 export default function Home(){
     return(
@@ -11,7 +11,10 @@ export default function Home(){
             <Header></Header>
             <div className="container">
                 <Hero />
+                <ProjectList />
             </div>
+
+
             <Banner title="home" image="bg-abaut.jpg"/>
             <Footer></Footer>
         </>
