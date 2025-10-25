@@ -9,13 +9,12 @@ export default function Home(){
     return(
         <>
             <Header></Header>
+            
             <div className="container">
                 <Hero />
                 <ProjectList />
             </div>
 
-
-            <Banner title="home" image="bg-abaut.jpg"/>
             <Footer></Footer>
         </>
     )
