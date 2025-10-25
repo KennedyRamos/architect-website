@@ -1,7 +1,22 @@
-export default function Projects(){
+//COMPONENTS
+import Banner from "../components/Banner/Banner";
+import ProjectList from "../components/ProjectList/ProjectsList";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+
+export default function Home(){
     return(
         <>
-            <h1>Projects</h1>
+            <Header></Header>
+            <Banner title="Projects" image="bg-projects.jpg"/>
+            
+            
+            <div className="container">
+                <ProjectList />
+            </div>
+
+
+            <Footer></Footer>
         </>
     )
 }
