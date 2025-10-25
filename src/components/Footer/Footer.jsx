@@ -14,7 +14,7 @@ export default function Footer(){
         <footer>
             <div className="container">
                 
-                <div className='d-flex jc-between'>
+                <div className='d-flex jc-between .mobile-fd-column'>
                     
                     <div className='footer-logo-col'>
                         <img src={LogoName} className='footer-logo'/>
@@ -33,7 +33,7 @@ export default function Footer(){
                         </div>     
                     </div>
 
-                    <div className='d-flex'>
+                    <div className='d-flex .mobile-fd-column'>
                         <div className='footer-col'>
                             <h3>Pages</h3>
                             <ul>
