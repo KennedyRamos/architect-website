@@ -1,6 +1,6 @@
 import './AboutText.css';
 
-export default function AboutText(props){
+export default function AboutText(){
     return(
         <div className='container'>
             <div className='text-section d-flex'>
