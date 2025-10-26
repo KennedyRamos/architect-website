@@ -1,0 +1,27 @@
+.text-section{
+    column-gap: 4.75rem;
+    margin: 8rem auto;
+}
+
+.text-section-text{
+    flex: 1;
+}
+
+.text-section-text h2{
+    font-size: 2.5rem;
+}
+
+.text-section-text p{
+    margin: 1.2rem 0;
+    text-align: justify;
+}
+
+.paragraph-bllue{
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px){
+    .text-section{
+        flex-direction: column;
+    }
+}
