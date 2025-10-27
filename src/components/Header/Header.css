@@ -2,6 +2,68 @@ header{
     padding: var(--50-spacing) 0;
 }
 
+nav {
+    display: flex;
+}
+
 nav a{
     margin: 0 0 0 var(--50-spacing);   
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media (max-width: 768px){
+    
+    nav{
+        background-color: var(--secondary-color);
+        border-left: .5rem solid var(--primary-color);
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        width: 50vw;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        box-shadow: -50vw 0px 0px 0px rgba(0, 0, 0, 0.5)
+    }
+    
+    nav.open{
+        display: flex;
+        align-items: end;
+    }
+
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li{
+        display: flex;
+    }
+
+    nav a{
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        margin-bottom: .5rem;
+        padding: .6rem;
+        width: 100%;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .close-btn{
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin: 0 0 rem;
+        padding: 1.2rem;
+        width: fit-content;
+        cursor: pointer;
+    }
 }
