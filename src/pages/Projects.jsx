@@ -1,6 +1,6 @@
 //COMPONENTS
 import Banner from "../components/Banner/Banner";
-import ProjectList from "../components/ProjectList/ProjectsList";
+import ProjectsList from "../components/ProjectsList/ProjectsList";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
@@ -12,7 +12,7 @@ export default function Home(){
             
             
             <div className="container">
-                <ProjectList />
+                <ProjectsList />
             </div>
 
 
