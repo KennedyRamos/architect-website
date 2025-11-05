@@ -1,0 +1,11 @@
+.loading-overlay-container {
+    background: var(--smooth-color);
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+
+.loading-overlay-container img {
+    height: 10rem;
+}
