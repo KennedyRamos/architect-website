@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // COMPONENTS
@@ -8,11 +8,16 @@ import Button from '../Button/Button';
 import './Header.css';
 import Logo from '../../assets/logo.svg';
 
+// CONTEXT
+import { AppContext } from '../../contexts/AppContext';
+
 export default function Header(){
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+    
+    const appContext = useContext(AppContext)
 
     return(
         <header>
@@ -29,10 +34,10 @@ export default function Header(){
                         <Button buttonStyle="unstyled" className='mobile-menu close-btn' onClick={toggleMenu}> X </Button>
 
                         <ul className='d-flex'>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/About">About</Link></li>
-                            <li><Link to="/Projects">Projects</Link></li>
-                            <li><Link to="/Contact">Contact</Link></li>
+                            <li><Link to="/">{appContext.languages[appContext.language].menu.home}</Link></li>
+                                <li><Link to="/About">{appContext.languages[appContext.language].menu.about}</Link></li>
+                                <li><Link to="/Projects">{appContext.languages[appContext.language].menu.projects}</Link></li>
+                                <li><Link to="/Contact">{appContext.languages[appContext.language].menu.contact}</Link></li>
                         </ul>
                     </nav>
                 </div>
