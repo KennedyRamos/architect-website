@@ -9,10 +9,10 @@ import UsaIcon from '../../assets/usa-icon.svg';
 import FacebookIcon from '../../assets/facebook-icon.svg';
 import InstagramIcon from '../../assets/instagram-icon.svg';
 import LinkedinIcon from '../../assets/linkedin-icon.svg';
+import Button from '../Button/Button';
 
 // CONTEXT
 import { AppContext } from '../../contexts/AppContext';
-import Button from '../Button/Button';
 
 export default function Footer(){
     const appContext = useContext(AppContext)
