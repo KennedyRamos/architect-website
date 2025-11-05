@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 // ASSETS
@@ -9,7 +10,15 @@ import FacebookIcon from '../../assets/facebook-icon.svg';
 import InstagramIcon from '../../assets/instagram-icon.svg';
 import LinkedinIcon from '../../assets/linkedin-icon.svg';
 
+// CONTEXT
+import { AppContext } from '../../contexts/AppContext';
+import Button from '../Button/Button';
+
 export default function Footer(){
+    const appContext = useContext(AppContext)
+    const changeLanguage = (country) => {
+        appContext.setLanguage(country)
+    }
     return(
         <footer>
             <div className="container">
@@ -18,7 +27,7 @@ export default function Footer(){
                     
                     <div className='footer-logo-col'>
                         <img src={LogoName} className='footer-logo'/>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eveniet veniam nulla deleniti a culpa!</p>
+                        <p>{appContext.languages[appContext.language].general.footerLogoText}</p>
                         
                         <div className='d-flex jc-between'>
                             <a target='_blank' href="#">
@@ -35,16 +44,16 @@ export default function Footer(){
 
                     <div className='d-flex .mobile-fd-column'>
                         <div className='footer-col'>
-                            <h3>Pages</h3>
+                            <h3>{appContext.languages[appContext.language].general.pages}</h3>
                             <ul>
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/About">About</Link></li>
-                                <li><Link to="/Projects">Projects</Link></li>
-                                <li><Link to="/Contact">Contact</Link></li>
+                                <li><Link to="/">{appContext.languages[appContext.language].menu.home}</Link></li>
+                                <li><Link to="/About">{appContext.languages[appContext.language].menu.about}</Link></li>
+                                <li><Link to="/Projects">{appContext.languages[appContext.language].menu.projects}</Link></li>
+                                <li><Link to="/Contact">{appContext.languages[appContext.language].menu.contact}</Link></li>
                             </ul>
                         </div>
                         <div className='footer-col'>
-                            <h3>Contact</h3>
+                            <h3>{appContext.languages[appContext.language].general.contact}</h3>
                             <p>Jardim Jordão - Jaboatão dos guararapes |Pernambuco</p>
                             <p>devnedy@gmail.com</p>
                             <p>(81) 97916-1344</p>
@@ -55,8 +64,12 @@ export default function Footer(){
                 <div className='d-flex jc-between footer-copy'>
                     <p>Copyright © Dev Kennedy Ramos - 2025</p>
                     <div className='langs-area d-flex'>
-                        <img src={BrazilIcon} />
-                        <img src={UsaIcon} />
+                        <Button buttonStyle="unstyled" onClick={() => changeLanguage('br')}>
+                            <img src={BrazilIcon} />
+                        </Button>
+                        <Button buttonStyle="unstyled" onClick={() => changeLanguage('en')}>
+                            <img src={UsaIcon} />
+                        </Button>
                     </div>
                 </div>
                 
