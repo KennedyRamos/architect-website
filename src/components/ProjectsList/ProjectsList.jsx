@@ -3,7 +3,10 @@ import './ProjectsList.css';
 
 // ASSETS
 import LikeFilled from '../../assets/like-black.svg'
-import Like from '../../assets/like-transparent.svg'
+import LikeOutline from '../../assets/like-transparent.svg';
+
+// COMPONENTS
+import Button from '../Button/Button'
 
 // UTILS
 import { getApiData } from '../../services/apiServices';
@@ -17,6 +20,21 @@ export default function ProjecstsList(){
 
     const [projects, setProjects] = useState([]);
 
+    const [favProjects, setFavProjects] =useState([])
+
+    const handleSavedFavProjects =  (id) => {
+        setFavProjects((prevFavProject) => {
+            if (prevFavProject.includes(id)) {
+                const filterArray = prevFavProject.filter((projectId)=> projectId !== id)
+                sessionStorage.setItem('favProjects', JSON.stringify(filterArray))
+                return prevFavProject.filter((projectId) => projectId !== id)
+            } else {
+                sessionStorage.setItem('favProjects', JSON.stringify([...prevFavProject, id]))
+                return[...prevFavProject, id]
+            }
+        })
+    }
+
     useEffect(() => {
         const fatchData = async () => {
           try {
@@ -29,6 +47,13 @@ export default function ProjecstsList(){
 
         fatchData();
     }, []);
+
+    useEffect(() => {
+        const savedFavProjects = JSON.parse(sessionStorage.getItem('favProjects'))
+        if (savedFavProjects){
+            setFavProjects(savedFavProjects)
+        }
+    }, [])
 
     return(
         <div className='projects-section'>
@@ -48,7 +73,9 @@ export default function ProjecstsList(){
 
                             <p>{project.subtitle}</p>
 
-                            <img src={LikeFilled} />
+                            <Button buttonStyle="unstyled" onClick={() => handleSavedFavProjects(project.id)}>
+                                <img src={favProjects.includes(project.id) ?LikeFilled : LikeOutline} />
+                            </Button>
                         </div>
                     ))
                 }
