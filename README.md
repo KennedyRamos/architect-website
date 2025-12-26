@@ -1,16 +1,40 @@
-# React + Vite
+# Architect Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website de portfólio moderno e responsivo desenvolvido com **React** e **Vite**, focado em apresentar projetos arquitetônicos, informações institucionais e contato de forma clara, elegante e com abordagem **mobile first**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Deploy
 
-## React Compiler
+O projeto está disponível online no link abaixo:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://architect-website-phi.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Sobre o Projeto
+
+O **Architect Website** é um projeto de portfólio criado para demonstrar habilidades em desenvolvimento front-end utilizando React. O layout foi pensado para ser totalmente responsivo, priorizando dispositivos móveis, e conta com navegação fluida, suporte a múltiplos idiomas e componentes reutilizáveis.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- React  
+- Vite  
+- React Router DOM  
+- Context API  
+- CSS puro (mobile first)  
+- SessionStorage  
+
+---
+
+## ✨ Funcionalidades
+
+- Layout responsivo com abordagem **mobile first**
+- Navegação entre páginas com React Router
+- Sistema de idiomas (PT / EN)
+- Listagem dinâmica de projetos
+- Favoritar projetos com persistência em `sessionStorage`
+- Componentes reutilizáveis
+- Estrutura organizada e escalável
