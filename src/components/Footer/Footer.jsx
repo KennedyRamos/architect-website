@@ -5,8 +5,8 @@ import './Footer.css'
 import LogoName from '../../assets/logo-with-name.svg'
 import BrazilIcon from '../../assets/brazil-icon.svg'
 import UsaIcon from '../../assets/usa-icon.svg'
-import FacebookIcon from '../../assets/facebook-icon.svg'
-import InstagramIcon from '../../assets/instagram-icon.svg'
+import WhatsappIcon from '../../assets/whatsapp-icon.svg'
+import GithubIcon from '../../assets/github-icon.svg'
 import LinkedinIcon from '../../assets/linkedin-icon.svg'
 import Button from '../Button/Button'
 
@@ -30,9 +30,9 @@ export default function Footer(){
             <p>{appContext.languages[appContext.language].general.footerLogoText}</p>
 
             <div className="social-links d-flex">
-              <a target="_blank" href="#"><img src={FacebookIcon} /></a>
-              <a target="_blank" href="#"><img src={InstagramIcon} /></a>
-              <a target="_blank" href="#"><img src={LinkedinIcon} /></a>
+              <a target="_blank" href="https://wa.me/5581979161344"><img src={WhatsappIcon} /></a>
+              <a target="_blank" href="https://github.com/KennedyRamos"><img src={GithubIcon} /></a>
+              <a target="_blank" href="https://www.linkedin.com/in/devkennedyramos/"><img src={LinkedinIcon} /></a>
             </div>
           </div>
 
