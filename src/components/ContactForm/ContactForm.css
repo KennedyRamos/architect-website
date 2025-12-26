@@ -1,20 +1,37 @@
 .contact-form{
-    margin: 8rem auto;
-    max-width: 40rem;
-    text-align: center;
-    width: 100%;
+  width:100%;
+  margin:4rem auto;
+  text-align:center;
 }
 
 .contact-form h2{
-    font-size: 2.5rem;
+  font-size:2rem;
 }
 
-.contact-form form {
-    margin: 2rem 0 0 0;
-    width: 100%;
+.contact-form form{
+  margin-top:2rem;
+  width:100%;
 }
 
-.contact-form .form-group {
-    column-gap: 40px;
-    margin: 2rem 0 0 0;   
+.contact-form .form-group{
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+  margin-top:2rem;
+}
+
+@media (min-width:768px){
+  .contact-form{
+    max-width:40rem;
+    margin:8rem auto;
+  }
+
+  .contact-form h2{
+    font-size:2.5rem;
+  }
+
+  .contact-form .form-group{
+    flex-direction:row;
+    gap:40px;
+  }
 }
